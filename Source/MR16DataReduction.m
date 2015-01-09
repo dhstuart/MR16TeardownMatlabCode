@@ -65,35 +65,35 @@ lamp_numbers = {
     'lamp1'
     };
 %% plot all driver waveforms for each lamp (either 1 or 4 lamps)
-% temp_lamp_number = 3;
-% lampNames = fieldnames(b);
-% tEnd = .25;%%.025
-% axisLimits = [
-%     10 1 %Acculamp
-%     8 1 %Collection LED
-%     40 .5 %Cree
-%     18 1 %Feit
-%     10 1 %GE
-%     10 .5 %great eagle
-%     20 1 %green creative
-%     8 1 %Ikea
-%     25 .8 %LEDnovation
-%     10 1 %lighting science
-%     12 0.5 %MSIi
-%     6 1.25 %MSIx
-%     40 .8 %sorra
-%     20 .8 %syvlania
-%     20 .5 %TCP
-%     12 .5 %terralux
-%     13 1 %Toshiba
-%     10 .8 %zenaro
-%     ];
-% for i = [17]%1:length(lampNames)
-%     lamp = snake_case(lampNames{i});
-%     MR16DataReduction_plotAllDriverWavPerLamp(b, axisLimits(i,:), lamp,1, tEnd)
-%     MR16DataReduction_plotAllDriverWavPerLamp(b, axisLimits(i,:), lamp,4, tEnd)
-% 
-% end
+temp_lamp_number = 3;
+lampNames = fieldnames(b);
+tEnd = .25;%%.025
+axisLimits = [
+    10 1 %Acculamp
+    8 1 %Collection LED
+    40 .5 %Cree
+    18 1 %Feit
+    10 1 %GE
+    10 .5 %great eagle
+    20 1 %green creative
+    8 1 %Ikea
+    25 .8 %LEDnovation
+    10 1 %lighting science
+    12 0.5 %MSIi
+    6 1.25 %MSIx
+    40 .8 %sorra
+    20 .8 %syvlania
+    20 .5 %TCP
+    12 .5 %terralux
+    13 1 %Toshiba
+    10 .8 %zenaro
+    ];
+for i = [17]%1:length(lampNames)
+    lamp = snake_case(lampNames{i});
+    MR16DataReduction_plotAllDriverWavPerLamp(b, axisLimits(i,:), lamp,1, tEnd)
+    MR16DataReduction_plotAllDriverWavPerLamp(b, axisLimits(i,:), lamp,4, tEnd)
+
+end
 % % save('allLampData.mat','b')
 
 
